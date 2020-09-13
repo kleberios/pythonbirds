@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos=2 #atributo de classe ou atributo defaul
+
     def __init__(self, nome, cor='Azul', sexo='F', idade = None, mesada=0):
         self.nome = nome
         self.cor = cor
@@ -11,8 +13,6 @@ class Pessoa:
 
     def diminui_mesada(self):
         self.mesada -= 50
-
-
 
 p  = Pessoa('Maria', idade=45)
 p2 = Pessoa('Bianca', 'Branca', 'M', 32)
@@ -31,6 +31,10 @@ print('Sobrenome da ' + p.nome + ' é ' + p2.sobrenome)
 print(p.__dict__)
 print(p2.__dict__)
 del p2.sobrenome
+p2.olhos = 2
 print(p2.__dict__)
+
+print(p.olhos)
+print(p2.olhos)
 
 
